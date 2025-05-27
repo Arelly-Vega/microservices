@@ -1,0 +1,23 @@
+#spring.application.name=microservice-course
+server:
+  port: 9090
+
+spring:
+  application:
+    name: msvc-course
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/courseDb
+    username: root
+    password: 75156554
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    eureka-server-u-r-l-context: http://localhost:8761/eureka
